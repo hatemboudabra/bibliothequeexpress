@@ -6,7 +6,7 @@ services:
       -  sonarqube
     image: hatemboudabra/bibliothequeexpress
     ports:
-      - "8089:8089"
+      - "9093:9093"
   db:
     image: mysql:8.0
     container_name: mysql-db
