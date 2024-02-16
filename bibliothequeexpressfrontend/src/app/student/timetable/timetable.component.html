@@ -1,0 +1,236 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>Time Table
+            </h2>
+          </div>
+          <div class="body">
+            <table class="table table-stripped">
+              <thead>
+                <tr>
+                  <th class="text text-center">Monday</th>
+                  <th class="text text-center">Tuesday</th>
+                  <th class="text text-center">Wednesday</th>
+                  <th class="text text-center">Thursday</th>
+                  <th class="text text-center">Friday</th>
+                  <th class="text text-center">Saturday</th>
+                  <th class="text text-center">Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text text-center" width="14%">
+                    <div class="timetable-block">
+                      <b class="col-green">Subject: Chemistry
+                      </b><br>
+                      <div>10:00 AM - 10-45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-orange">Subject: English
+                      </b><br>
+                      <div>10:45 AM - 11:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-blue">Subject: Physics
+                      </b><br>
+                      <div>11:30 AM - 12:15 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-purple">Subject: Computer
+                      </b><br>
+                      <div>01:00 AM - 01:45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-teal">Subject: Geography
+                      </b><br>
+                      <div>01:45 AM - 02:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                  </td>
+                  <td class="text text-center" width="14%">
+                    <div class="timetable-block">
+                      <b class="col-green">Subject: Chemistry
+                      </b><br>
+                      <div>10:00 AM - 10-45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-orange">Subject: English
+                      </b><br>
+                      <div>10:45 AM - 11:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-blue">Subject: Physics
+                      </b><br>
+                      <div>11:30 AM - 12:15 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-purple">Subject: Computer
+                      </b><br>
+                      <div>01:00 AM - 01:45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-teal">Subject: Geography
+                      </b><br>
+                      <div>01:45 AM - 02:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                  </td>
+                  <td class="text text-center" width="14%">
+                    <div class="timetable-block">
+                      <b class="col-green">Subject: Chemistry
+                      </b><br>
+                      <div>10:00 AM - 10-45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-orange">Subject: English
+                      </b><br>
+                      <div>10:45 AM - 11:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-blue">Subject: Physics
+                      </b><br>
+                      <div>11:30 AM - 12:15 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-purple">Subject: Computer
+                      </b><br>
+                      <div>01:00 AM - 01:45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-teal">Subject: Geography
+                      </b><br>
+                      <div>01:45 AM - 02:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                  </td>
+                  <td class="text text-center" width="14%">
+                    <div class="timetable-block">
+                      <b class="col-green">Subject: Chemistry
+                      </b><br>
+                      <div>10:00 AM - 10-45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-orange">Subject: English
+                      </b><br>
+                      <div>10:45 AM - 11:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-blue">Subject: Physics
+                      </b><br>
+                      <div>11:30 AM - 12:15 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-purple">Subject: Computer
+                      </b><br>
+                      <div>01:00 AM - 01:45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-teal">Subject: Geography
+                      </b><br>
+                      <div>01:45 AM - 02:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                  </td>
+                  <td class="text text-center" width="14%">
+                    <div class="timetable-block">
+                      <b class="col-green">Subject: Chemistry
+                      </b><br>
+                      <div>10:00 AM - 10-45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-orange">Subject: English
+                      </b><br>
+                      <div>10:45 AM - 11:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-blue">Subject: Physics
+                      </b><br>
+                      <div>11:30 AM - 12:15 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-purple">Subject: Computer
+                      </b><br>
+                      <div>01:00 AM - 01:45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-teal">Subject: Geography
+                      </b><br>
+                      <div>01:45 AM - 02:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                  </td>
+                  <td class="text text-center" width="14%">
+                    <div class="timetable-block">
+                      <b class="col-green">Subject: Chemistry
+                      </b><br>
+                      <div>10:00 AM - 10-45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-orange">Subject: English
+                      </b><br>
+                      <div>10:45 AM - 11:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-blue">Subject: Physics
+                      </b><br>
+                      <div>11:30 AM - 12:15 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-purple">Subject: Computer
+                      </b><br>
+                      <div>01:00 AM - 01:45 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                    <div class="timetable-block">
+                      <b class="col-teal">Subject: Geography
+                      </b><br>
+                      <div>01:45 AM - 02:30 AM</div>
+                      <div>Room Number: 101</div>
+                    </div>
+                  </td>
+                  <td class="text text-center" width="14%">
+
+                    <div class="timetable-block clearfix">
+                      <b class="text text-center">Not <br>Scheduled</b><br>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,144 @@
+[{
+  "id": "001",
+  "img": "assets/images/user/usrbig1.jpg",
+  "name": "John Deo",
+  "check_in": "10:30",
+  "break": "01:15",
+  "check_out": "19:37",
+  "total": "08:02",
+  "status": "present",
+  "department": "Admin"
+},
+{
+  "id": "002",
+  "img": "assets/images/user/usrbig2.jpg",
+  "name": "Sarah Smith",
+  "check_in": "10:32",
+  "break": "01:00",
+  "check_out": "19:30",
+  "total": "08:10",
+  "status": "absent",
+  "department": "Library"
+},
+{
+  "id": "003",
+  "img": "assets/images/user/usrbig3.jpg",
+  "name": "Edna Gilbert",
+  "check_in": "10:42",
+  "break": "01:10",
+  "check_out": "19:32",
+  "total": "08:08",
+  "status": "absent",
+  "department": "Library"
+},
+{
+  "id": "004",
+  "img": "assets/images/user/usrbig4.jpg",
+  "name": "Shelia Osterberg",
+  "check_in": "10:38",
+  "break": "01:07",
+  "check_out": "19:40",
+  "total": "08:00",
+  "status": "present",
+  "department": "Teacher"
+},
+{
+  "id": "005",
+  "img": "assets/images/user/usrbig5.jpg",
+  "name": "Barbara Garland",
+  "check_in": "10:33",
+  "break": "01:15",
+  "check_out": "19:30",
+  "total": "08:01",
+  "status": "present",
+  "department": "Teacher"
+},
+{
+  "id": "006",
+  "img": "assets/images/user/usrbig6.jpg",
+  "name": "Sarah Smith",
+  "check_in": "10:30",
+  "break": "01:10",
+  "check_out": "19:37",
+  "total": "08:10",
+  "status": "absent",
+  "department": "Teaching"
+},
+{
+  "id": "007",
+  "img": "assets/images/user/usrbig7.jpg",
+  "name": "Marie Brodsky",
+  "check_in": "10:32",
+  "break": "01:05",
+  "check_out": "19:40",
+  "total": "08:00",
+  "status": "absent",
+  "department": "Sport"
+},
+{
+  "id": "008",
+  "img": "assets/images/user/usrbig8.jpg",
+  "name": "Kara Thompson",
+  "check_in": "10:40",
+  "break": "01:07",
+  "check_out": "19:30",
+  "total": "08:12",
+  "status": "present",
+  "department": "Library"
+},
+{
+  "id": "009",
+  "img": "assets/images/user/usrbig9.jpg",
+  "name": "Joseph Nye",
+  "check_in": "10:28",
+  "break": "01:00",
+  "check_out": "19:32",
+  "total": "08:02",
+  "status": "present",
+  "department": "Library"
+},
+{
+  "id": "010",
+  "img": "assets/images/user/usrbig10.jpg",
+  "name": "Ricardo Wendler",
+  "check_in": "10:38",
+  "break": "01:15",
+  "check_out": "19:37",
+  "total": "08:00",
+  "status": "present",
+  "department": "Placement"
+},
+{
+  "id": "011",
+  "img": "assets/images/user/usrbig1.jpg",
+  "name": "Brian Shelley",
+  "check_in": "10:30",
+  "break": "01:07",
+  "check_out": "19:38",
+  "total": "08:10",
+  "status": "absent",
+  "department": "Teaching"
+},
+{
+  "id": "012",
+  "img": "assets/images/user/usrbig2.jpg",
+  "name": "Theresa Bullock",
+  "check_in": "10:40",
+  "break": "01:00",
+  "check_out": "19:30",
+  "total": "08:08",
+  "status": "present",
+  "department": "Teaching"
+},
+{
+  "id": "013",
+  "img": "assets/images/user/usrbig3.jpg",
+  "name": "Jeannie Elder",
+  "check_in": "10:42",
+  "break": "01:05",
+  "check_out": "19:38",
+  "total": "08:12",
+  "status": "present",
+  "department": "Sport"
+}
+]

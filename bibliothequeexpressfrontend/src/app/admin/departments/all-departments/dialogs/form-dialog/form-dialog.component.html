@@ -1,0 +1,115 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <div class="modal-about">
+          {{dialogTitle}}
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" class="modal-close-button" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="departmentForm" (ngSubmit)="submit">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Department</mat-label>
+            <mat-select formControlName="dName" required>
+              <mat-option [value]="'mechanical'">
+                Mechanical
+              </mat-option>
+              <mat-option [value]="'science'">
+                Science
+              </mat-option>
+              <mat-option [value]="'mathematics'">
+                Mathematics
+              </mat-option>
+              <mat-option [value]="'computer'">
+                Computer
+              </mat-option>
+              <mat-option [value]="'civil'">
+                Civil
+              </mat-option>
+              <mat-option [value]="'automobile'">
+                Automobile
+              </mat-option>
+              <mat-option [value]="'management'">
+                Management
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="departmentForm.get('dName')?.hasError('required')">
+              Select Any Department
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Head Of Department</mat-label>
+            <input matInput formControlName="hod" required>
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>person</mat-icon>
+            <mat-error *ngIf="departmentForm.get('hod')?.hasError('required')">
+              HOD name required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="phone">
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>phone</mat-icon>
+            <mat-error *ngIf="departmentForm.get('phone')?.hasError('required')">
+              Phone is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required>
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>email</mat-icon>
+            <mat-error
+              *ngIf="departmentForm.get('email')?.hasError('required') || departmentForm.get('email')?.touched">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Department Start Year</mat-label>
+            <input matInput formControlName="sYear" required>
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>query_builder</mat-icon>
+            <mat-error *ngIf="departmentForm.get('sYear')?.hasError('required')">
+              Department Start Year is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class=" col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Student Capacity</mat-label>
+            <input matInput formControlName="sCapacity" required>
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>group</mat-icon>
+            <mat-error *ngIf="departmentForm.get('sCapacity')?.hasError('required')">
+              Student Capacity is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" [disabled]="!departmentForm.valid" [mat-dialog-close]="1"
+              (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <div class="modal-about">
+          {{dialogTitle}}
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" class="modal-close-button" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="lecturesForm" (ngSubmit)="submit">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Subject Name</mat-label>
+            <mat-select formControlName="sName" required>
+              <mat-option [value]="'Mathematics'">
+                Mathematics
+              </mat-option>
+              <mat-option [value]="'Chemistry'">
+                Chemistry
+              </mat-option>
+              <mat-option [value]="'Physics'">
+                Physics
+              </mat-option>
+              <mat-option [value]="'Biology'">
+                Biology
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="lecturesForm.get('sName')?.hasError('required')">
+              Select Any Subject
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Class Name</mat-label>
+            <input matInput formControlName="class" required>
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>person</mat-icon>
+            <mat-error *ngIf="lecturesForm.get('class')?.hasError('required')">
+              Class name required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class=" col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="lecturesForm.get('date')?.hasError('required')">
+              Please select date
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Time</mat-label>
+            <input matInput formControlName="time" required>
+            <mat-icon class="material-icons-two-tone color-icon p-3" matSuffix>schedule</mat-icon>
+            <mat-error *ngIf="lecturesForm.get('time')?.hasError('required')">
+              Please enter a valid time
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status" required>
+              <mat-option [value]="'Confirm'">
+                Confirm
+              </mat-option>
+              <mat-option [value]="'Cancelled'">
+                Cancelled
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="lecturesForm.get('status')?.hasError('required')">
+              Select Status
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" [disabled]="!lecturesForm.valid" [mat-dialog-close]="1"
+              (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

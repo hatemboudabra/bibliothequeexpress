@@ -1,0 +1,24 @@
+version: "2"
+services:
+  backend:
+    depends_on:
+      - db
+      -  sonarqube
+    image: hatemboudabra/bibliothequeexpress
+    ports:
+      - "8089:8089"
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_DATABASE: bibliothequeexpresss
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - "3307:3306"
+  sonarqube:
+    image: sonarqube:latest
+    environment:
+      - SONARQUBE_WEB_USERNAME=admin
+      - SONARQUBE_WEB_PASSWORD=admin123
+    ports:
+      - "9001:9000"

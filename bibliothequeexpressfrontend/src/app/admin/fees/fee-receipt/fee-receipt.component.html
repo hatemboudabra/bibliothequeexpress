@@ -1,0 +1,113 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="white-box">
+                  <h3>
+                    <b>RECEIPT</b>
+                    <span class="float-end">#345766</span>
+                  </h3>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="float-start">
+                        <address>
+                          <p class="font-bold">BILL FROM :</p>
+                          <img src="assets/images/invoice_logo.png" alt="logo" class="logo-default" />
+                          <p class="text-muted m-l-5">
+                            Aditya University, <br> Opp. Town Hall, <br>
+                            Sardar Patel Road, <br> Ahmedabad - 380015
+                          </p>
+                        </address>
+                      </div>
+                      <div class="float-end text-end">
+                        <address>
+                          <p class="addr-font-h3 font-bold">BILL TO :</p>
+                          <p class="font-bold addr-font-h4">Jayesh Patel</p>
+                          <p class="text-muted m-l-30">
+                            207, Prem Sagar Appt.,
+                            <br> Near Income Tax Office,
+                            <br> Ashram Road,
+                            <br> Ahmedabad - 380057
+                          </p>
+                          <p class="m-t-30">
+                            <b>Invoice Date :</b>
+                            <i class="ml-2 fa fa-calendar"></i> 14th July 2019
+                          </p>
+                          <p>
+                            <b>Status :</b>
+                            <span class="label col-green font-weight-bold">paid</span>
+                          </p>
+                        </address>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="table-responsive m-t-40">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th class="text-center">#</th>
+                              <th class="text-end">Fees Type</th>
+                              <th class="text-end">Frequency</th>
+                              <th class="text-end">Date</th>
+                              <th class="text-end">Invoice number</th>
+                              <th class="text-end">Amount</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-center">1</td>
+                              <td class="text-end">Annual Fees</td>
+                              <td class="text-end">Yearly</td>
+                              <td class="text-end">2016-11-19</td>
+                              <td class="text-end">#IN-345609865</td>
+                              <td class="text-end">$100</td>
+                            </tr>
+                            <tr>
+                              <td class="text-center">2</td>
+                              <td class="text-end">Tuition Fees</td>
+                              <td class="text-end">Monthly</td>
+                              <td class="text-end">2016-11-19</td>
+                              <td class="text-end">#IN-345604565</td>
+                              <td class="text-end">$50</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="float-end m-t-30 text-end">
+                        <p>Sub - Total amount: $150</p>
+                        <p>Discount : $10 </p>
+                        <p>Tax (10%) : $14 </p>
+                        <hr>
+                        <h3><b>Total :</b> $164</h3>
+                      </div>
+                      <div class="clearfix"></div>
+                      <hr>
+                      <div class="text-end">
+                        <button mat-raised-button color="primary"> Proceed to payment
+                        </button>
+                        <button onclick="javascript:window.print();" class="btn btn-default btn-outline" type="button">
+                          <span><i class="fa fa-print"></i> Print</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

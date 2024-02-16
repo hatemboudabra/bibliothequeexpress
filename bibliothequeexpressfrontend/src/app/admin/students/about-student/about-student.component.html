@@ -1,0 +1,290 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <!-- Your content goes here  -->
+    <div class="row clearfix">
+      <div class="col-lg-4 col-md-12">
+        <div class="card">
+          <div class="m-b-20">
+            <div class="contact-grid">
+              <div class="profile-header bg-dark">
+                <div class="user-name">Sarah Smith</div>
+                <div class="name-center">Computer Department</div>
+              </div>
+              <img src="assets/images/user/usrbig4.jpg" class="user-img" alt="">
+              <p>
+                456, Estern evenue, Courtage area,
+                <br />New York
+              </p>
+              <div>
+                <span class="phone">
+                  <i class="material-icons">phone</i>264-625-2583</span>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <h5>564</h5>
+                  <small>Following</small>
+                </div>
+                <div class="col-4">
+                  <h5>18k</h5>
+                  <small>Followers</small>
+                </div>
+                <div class="col-4">
+                  <h5>565</h5>
+                  <small>Post</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <mat-tab-group mat-align-tabs="start">
+            <mat-tab label="About">
+              <div class="p-4">
+                <p class="text-default">Hello I am Sarah Smith a student in Sanjivni College Surat. I love
+                  to study with all my class friends and professors.</p>
+                <ul class="list-group list-group-unbordered">
+                  <li class="list-group-item">
+                    <b>Gender </b>
+                    <div class="profile-desc-item float-end">Female</div>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Lectures Taken </b>
+                    <div class="profile-desc-item float-end">11k+</div>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Department </b>
+                    <div class="profile-desc-item float-end">Computer Engineering</div>
+                  </li>
+                </ul>
+              </div>
+            </mat-tab>
+            <mat-tab label="Skills">
+              <ul class="list-unstyled p-4">
+                <li>
+                  <div>Study</div>
+                  <div class="progress skill-progress m-b-20">
+                    <div class="progress-bar l-bg-green width-per-45" role="progressbar" aria-valuenow="45"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li>
+                  <div>Cricket</div>
+                  <div class="progress skill-progress m-b-20">
+                    <div class="progress-bar l-bg-orange width-per-38" role="progressbar" aria-valuenow="38"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li>
+                  <div>Music</div>
+                  <div class="progress skill-progress m-b-20">
+                    <div class="progress-bar l-bg-cyan width-per-39" role="progressbar" aria-valuenow="39"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+                <li>
+                  <div>Yoga</div>
+                  <div class="progress skill-progress m-b-20">
+                    <div class="progress-bar l-bg-purple width-per-70" role="progressbar" aria-valuenow="70"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </li>
+              </ul>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+
+      <div class="col-lg-8 col-md-12">
+        <div class="card">
+          <mat-tab-group>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon msr-2">face</mat-icon>
+                About Me
+              </ng-template>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="project_widget">
+                  <div class="header">
+                    <h2><strong>About</strong></h2>
+                  </div>
+                  <div class="body">
+                    <div class="row">
+                      <div class="col-md-3 col-6 b-r">
+                        <strong>Full Name</strong>
+                        <br>
+                        <p class="text-muted">Emily Smith</p>
+                      </div>
+                      <div class="col-md-3 col-6 b-r">
+                        <strong>Mobile</strong>
+                        <br>
+                        <p class="text-muted">(123) 456 7890</p>
+                      </div>
+                      <div class="col-md-3 col-6 b-r">
+                        <strong>Email</strong>
+                        <br>
+                        <p class="text-muted">johndeo@example.com</p>
+                      </div>
+                      <div class="col-md-3 col-6">
+                        <strong>Location</strong>
+                        <br>
+                        <p class="text-muted">India</p>
+                      </div>
+                    </div>
+                    <p class="m-t-30">Open after rule place He earth earth good called days unto
+                      which wherein day doesn't said day image
+                      signs fish days forth for evening whose his make his bearing
+                      years gathering good brought without.</p>
+                    <p>Years living creepeth. Form them yielding behold greater
+                      divided void was fowl earth in. Spirit Bring
+                      grass they're you have shall years so morning. Grass
+                      gathering won't heaven set greater darkness forth
+                      abundantly he.</p>
+                    <p>Isn't hath, forth. Brought sea subdue, from divided replenish
+                      creature after creeping abundantly fly
+                      is cattle fill were years years may darkness blessed which
+                      land creepeth good moving good. Life living
+                      you're.</p>
+                    <br>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="project_widget">
+                  <div class="header">
+                    <h2><strong>Education</strong></h2>
+                  </div>
+                  <div class="body">
+                    <ul>
+                      <li>Schooling at sarvoday vidhyalay, Mumbai</li>
+                      <li>Betchler In Arts in Bhagvati College Hariyana</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="project_widget">
+                  <div class="header">
+                    <h2><strong>Certificates</strong></h2>
+                  </div>
+                  <div class="body">
+                    <ul>
+                      <li>1st Prise in Music competition</li>
+                      <li>1st Prise in Acting & Drama</li>
+                      <li>Gold Medal in Betchler in Arts</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+
+            <mat-tab>
+              <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon msr-2">settings</mat-icon>
+                Settings
+              </ng-template>
+              <div class="header">
+                <h2>
+                  <strong>Security</strong> Settings</h2>
+              </div>
+              <div class="body">
+                <div class="example-container">
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Current Password</mat-label>
+                    <input matInput type="password">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>New Password</mat-label>
+                    <input matInput type="password">
+                  </mat-form-field>
+                </div>
+                <button mat-raised-button color="primary">Save</button>
+              </div>
+              <div class="header">
+                <h2>
+                  <strong>Account</strong> Settings</h2>
+              </div>
+              <div class="body">
+                <div class="row clearfix">
+                  <div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>First Name</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                    <div class="form-group">
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>City</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                    <div class="form-group">
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12">
+                    <div class="form-group">
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Country</mat-label>
+                        <input matInput>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput></textarea>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <mat-checkbox class="example-margin">Profile Visibility For Everyone
+                      </mat-checkbox>
+                    </div>
+                    <div class="form-group">
+                      <mat-checkbox class="example-margin">New task notifications
+                      </mat-checkbox>
+                    </div>
+                    <div class="form-group">
+                      <mat-checkbox class="example-margin">New friend request notifications
+                      </mat-checkbox>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button mat-raised-button color="primary">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

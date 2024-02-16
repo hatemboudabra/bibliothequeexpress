@@ -1,0 +1,162 @@
+[
+  {
+    "id": "001",
+    "rollNo": "1",
+    "img": "assets/images/user/user1.jpg",
+    "sName": "Jenish Shah",
+    "class": "Class A",
+    "date": "2019-02-25T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "002",
+    "rollNo": "2",
+    "img": "assets/images/user/user2.jpg",
+    "sName": "Priya Patel",
+    "class": "Class A",
+    "date": "2019-02-17T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "003",
+    "rollNo": "3",
+    "img": "assets/images/user/user4.jpg",
+    "sName": "Mayank Jani",
+    "class": "Class B",
+    "date": "2020-01-01T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "004",
+    "rollNo": "4",
+    "img": "assets/images/user/user3.jpg",
+    "sName": "Bertie Jones",
+    "class": "Class A",
+    "date": "2019-02-01T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "005",
+    "rollNo": "5",
+    "img": "assets/images/user/user5.jpg",
+    "sName": "Jenish Shah",
+    "class": "Class E",
+    "date": "2019-02-02T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "006",
+    "rollNo": "6",
+    "img": "assets/images/user/user6.jpg",
+    "sName": "Sarah Smith",
+    "class": "Class C",
+    "date": "2019-02-26T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "007",
+    "rollNo": "7",
+    "img": "assets/images/user/user7.jpg",
+    "sName": "Pam Abbott",
+    "class": "Class B",
+    "date": "2019-02-22T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "008",
+    "rollNo": "8",
+    "img": "assets/images/user/user8.jpg",
+    "sName": "Bethaney Spence",
+    "class": "Class A",
+    "date": "2019-02-19T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "009",
+    "rollNo": "9",
+    "img": "assets/images/user/user9.jpg",
+    "sName": "Ivan Bell",
+    "class": "Class E",
+    "date": "2019-02-14T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "010",
+    "rollNo": "10",
+    "img": "assets/images/user/user10.jpg",
+    "sName": "Jay Soni",
+    "class": "Class B",
+    "date": "2019-02-27T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "011",
+    "rollNo": "11",
+    "img": "assets/images/user/user4.jpg",
+    "sName": "Wesley Casey",
+    "class": "Class A",
+    "date": "2019-02-21T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "012",
+    "rollNo": "12",
+    "img": "assets/images/user/user7.jpg",
+    "sName": "Robin Graves",
+    "class": "Class C",
+    "date": "2019-02-10T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "013",
+    "rollNo": "13",
+    "img": "assets/images/user/user2.jpg",
+    "sName": "Ivan Bell",
+    "class": "Class F",
+    "date": "2019-02-10T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "014",
+    "rollNo": "14",
+    "img": "assets/images/user/user1.jpg",
+    "sName": "Justin Copeland",
+    "class": "Class E",
+    "date": "2019-02-16T14:22:18Z",
+    "status": "Absent",
+    "note": "Leave for marriage function"
+  },
+  {
+    "id": "015",
+    "rollNo": "15",
+    "img": "assets/images/user/user8.jpg",
+    "sName": "Kendra King",
+    "class": "Class F",
+    "date": "2019-02-04T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  },
+  {
+    "id": "016",
+    "rollNo": "16",
+    "img": "assets/images/user/user1.jpg",
+    "sName": "Alexandra Clarke",
+    "class": "Class A",
+    "date": "2019-02-04T14:22:18Z",
+    "status": "Present",
+    "note": ""
+  }
+]

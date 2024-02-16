@@ -1,0 +1,253 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="body">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="assets/images/pages/welcome.png" alt="" class="w-100">
+              </div>
+              <div class="col-md-8">
+                <h4 class="font-20 weight-500 mb-2">
+                  Welcome back <div class="weight-600 font-30 col-blue pt-1">Ashton Cox!</div>
+                </h4>
+                <p class="font-18 max-width-600">We would like to take this opportunity to welcome you to our practice
+                  and to thank you
+                  for choosing our physicians to participate in your healthcare. We look forward to
+                  providing you with personalized, comprehensive health care focusing on wellness and
+                  prevention.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="float-start">
+              <h6 class="text-muted">Average Lecture Per Month</h6>
+              <h5>65 <span class="text-muted font-12">(Average)</span></h5>
+            </div>
+            <div class="mb-5">
+              <apx-chart [series]="avgLecChartOptions.series!" [chart]="avgLecChartOptions.chart!"
+                [xaxis]="avgLecChartOptions.xaxis!" [stroke]="avgLecChartOptions.stroke!"
+                [colors]="avgLecChartOptions.colors!" [dataLabels]="avgLecChartOptions.dataLabels!"
+                [legend]="avgLecChartOptions.legend!" [markers]="avgLecChartOptions.markers!"
+                [grid]="avgLecChartOptions.grid!" [yaxis]="avgLecChartOptions.yaxis!"
+                [tooltip]="avgLecChartOptions.tooltip!" [title]="avgLecChartOptions.title!"
+                [fill]="avgLecChartOptions.fill!">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Subject Chart</h2>
+          </div>
+          <div class="body">
+            <div id="chart">
+              <apx-chart [series]="pieChartOptions.series!" [chart]="pieChartOptions.chart!"
+                [labels]="pieChartOptions.labels!" [responsive]="pieChartOptions.responsive!"
+                [dataLabels]="pieChartOptions.dataLabels!" [legend]="pieChartOptions.legend!" class="apex-pie-center">
+              </apx-chart>
+            </div>
+            <div class="table-responsive m-t-15">
+              <table class="table align-items-center">
+                <tbody>
+                  <tr>
+                    <td><i class="fa fa-circle col-cyan msr-2"></i> Music</td>
+                    <td>23</td>
+                    <td class="col-green">+32%</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-circle col-blue msr-2"></i>Science</td>
+                    <td>32</td>
+                    <td class="col-green">+12%</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-circle col-orange msr-2"></i>Economics</td>
+                    <td>12</td>
+                    <td class="col-orange">-12%</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-circle col-green msr-2"></i>Mathes</td>
+                    <td>32</td>
+                    <td class="col-green">+3%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Lecture In Week</h2>
+          </div>
+          <div class="body">
+            <div class="table-responsive">
+              <table class="table table-borderless medicine-list">
+                <tr class="mb-3">
+                  <td><i class="fas fa-microscope pill-style col-green"></i> Chemistry</td>
+                  <td class="text-end">
+                    <span class="badge-outline">M - W - F -</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-square-root-alt pill-style col-blue"></i> Mathematics</td>
+                  <td class="text-end">
+                    <span class="badge-outline">- T - T - S</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-palette pill-style col-indigo"></i> Painting</td>
+                  <td class="text-end">
+                    <span class="badge-outline">M - - T - S</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-business-time pill-style col-orange"></i> Business Studies</td>
+                  <td class="text-end">
+                    <span class="badge-outline">M - W T - -</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-heart pill-style col-red"></i> Biology</td>
+                  <td class="text-end">
+                    <span class="badge-outline">M - W - F -</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-laptop-code pill-style col-purple"></i> Computer Studies</td>
+                  <td class="text-end">
+                    <span class="badge-outline">M - - T - S</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-globe-asia pill-style col-cyan"></i> Geography</td>
+                  <td class="text-end">
+                    <span class="badge-outline">M - W - F S</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="text-center p-t-20">
+              <button mat-stroked-button color="primary">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="card">
+          <div class="header">
+            <h2>
+              Today's Lecture</h2>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <table class="table table-hover ">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Subject Name</th>
+                    <th>Standard</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                    <th>Details </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Business studies</td>
+                    <td>Standard 12</td>
+                    <td>10:30 AM</td>
+                    <td>45 Min</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Chemistry</td>
+                    <td>Standard 11</td>
+                    <td>11:15 AM</td>
+                    <td>30 Min</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Biology</td>
+                    <td>Standard 12</td>
+                    <td>12:00 AM</td>
+                    <td>35 Min</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Physics</td>
+                    <td>Standard 11</td>
+                    <td>12:45 AM</td>
+                    <td>30 Min</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Music</td>
+                    <td>Standard 8</td>
+                    <td>02:00 AM</td>
+                    <td>45 Min</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Computer studies</td>
+                    <td>Standard 10</td>
+                    <td>03:30 AM</td>
+                    <td>35 Min</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

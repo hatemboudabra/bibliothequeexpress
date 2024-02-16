@@ -1,0 +1,198 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Edit Library Asset</h2>
+
+          </div>
+          <div class="body">
+            <form class="m-4" [formGroup]="libraryForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Bill No</mat-label>
+                    <input matInput formControlName="no" required>
+                    <mat-error *ngIf="libraryForm.get('no')?.hasError('required')">
+                      Bill no is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input matInput formControlName="title" required>
+                    <mat-error *ngIf="libraryForm.get('title')?.hasError('required')">
+                      Title is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Subject</mat-label>
+                    <mat-select formControlName="subject" required>
+                      <mat-option [value]="'mathematics'">
+                        Mathematics
+                      </mat-option>
+                      <mat-option [value]="'java'">
+                        Java
+                      </mat-option>
+                      <mat-option [value]="'networking'">
+                        Networking
+                      </mat-option>
+                      <mat-option [value]="'politics'">
+                        Politics
+                      </mat-option>
+                      <mat-option [value]="'animation'">
+                        Animation
+                      </mat-option>
+                      <mat-option [value]="'other'">
+                        Other
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="libraryForm.get('subject')?.hasError('required')">
+                      Subject is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Auther Name</mat-label>
+                    <input matInput formControlName="autherName">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Publisher</mat-label>
+                    <input matInput formControlName="publisher" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Department</mat-label>
+                    <mat-select formControlName="department" required>
+                      <mat-option [value]="'mechanical'">
+                        Mechanical
+                      </mat-option>
+                      <mat-option [value]="'science'">
+                        Science
+                      </mat-option>
+                      <mat-option [value]="'mathematics'">
+                        Mathematics
+                      </mat-option>
+                      <mat-option [value]="'computer'">
+                        Computer
+                      </mat-option>
+                      <mat-option [value]="'civil'">
+                        Civil
+                      </mat-option>
+                      <mat-option [value]="'management'">
+                        Management
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="libraryForm.get('department')?.hasError('required')">
+                      Select Any Department
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Asset Type</mat-label>
+                    <mat-select formControlName="aType" required>
+                      <mat-option [value]="'book'">
+                        Book
+                      </mat-option>
+                      <mat-option [value]="'cd'">
+                        CD
+                      </mat-option>
+                      <mat-option [value]="'dvd'">
+                        DVD
+                      </mat-option>
+                      <mat-option [value]="'news paper'">
+                        News Paper
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="libraryForm.get('aType')?.hasError('required')">
+                      Select Any Department
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Purchase Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="date" required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="libraryForm.get('date')?.hasError('required')">
+                      Please select date
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Price</mat-label>
+                    <input matInput formControlName="price" required>
+                    <mat-error *ngIf="libraryForm.get('price')?.hasError('required')">
+                      Enter price
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status" required>
+                      <mat-option [value]="'in stock'">
+                        In Stock
+                      </mat-option>
+                      <mat-option [value]="'out of stock'">
+                        Out Of Stock
+                      </mat-option>
+                      <mat-option [value]="'issue'">
+                        Issue
+                      </mat-option>
+                      <mat-option [value]="'repair'">
+                        Repair
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="libraryForm.get('status')?.hasError('required')">
+                      Select Any Status
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
+                  <mat-form-field class="example-full-width mb-3" appearance="outline">
+                    <mat-label>Details</mat-label>
+                    <textarea matInput formControlName="details"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3">
+                  <button class="btn-space" [disabled]="!libraryForm.valid " mat-raised-button
+                    color="primary">Submit</button>
+                  <button type="button" mat-raised-button color="warn">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

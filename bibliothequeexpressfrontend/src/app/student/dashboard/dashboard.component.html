@@ -1,0 +1,504 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <!-- Widgets -->
+    <div class="row">
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="body">
+            <div class="row align-items-center">
+              <div class="col-md-4 mb-0">
+                <div class="recent-report__chart">
+                  <canvas baseChart height="200px" width="200px" class="chart" [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels" [options]="doughnutChartOptions" [type]="doughnutChartType"></canvas>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <h4>
+                  <div class="weight-600 col-pink pt-1">Good Job, Sarah. Keep Going!! </div>
+                </h4>
+                <p class="font-15 max-width-600">You task are 80% completed this week. Keep it up and improve your
+                  result. Progress is very good!!!</p>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div><i class="fa fa-circle dot1 msr-2"></i> Development - 1 hour 50 Mins</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div><i class="fa fa-circle dot2 msr-2"></i> Java Class - 50 Mins</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div><i class="fa fa-circle dot3 msr-2"></i> painting - 1 hour 20 Mins</div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div><i class="fa fa-circle dot4 msr-2"></i> Geography Class - 30 Mins</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card l-bg-purple p-2 px-4 text-white py-3">
+          <div class="info d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column text-white font-22"> <span>English Vocabulary Test</span>
+              <small class="mt-2"><i class="far fa-clock msr-2"></i> 25, Feb, 2020. 04:00 PM</small> </div>
+          </div>
+        </div>
+        <div class="card l-bg-green p-2 px-4 text-white py-3">
+          <div class="info d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column text-white font-22"> <span>Science Homework Submition</span>
+              <small class="mt-2"><i class="far fa-clock msr-2"></i> 28, Feb, 2020. 10:00 AM</small> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #END# Widgets -->
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Your Progress</h2>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Progress</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Chemistry</td>
+                    <td>30%<mat-progress-bar mode="determinate" value="30" color="warn"></mat-progress-bar>
+                    </td>
+                    <td>2 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Mathematics</td>
+                    <td>55%<mat-progress-bar mode="determinate" value="55"></mat-progress-bar>
+                    </td>
+                    <td>3 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Painting</td>
+                    <td>67%<mat-progress-bar mode="determinate" value="67"></mat-progress-bar>
+                    </td>
+                    <td>1 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Business studies</td>
+                    <td>70%<mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                    </td>
+                    <td>2 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Biology</td>
+                    <td>24%<mat-progress-bar mode="determinate" value="24" color="warn"></mat-progress-bar>
+                    </td>
+                    <td>3 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Computer studies</td>
+                    <td>77%<mat-progress-bar mode="determinate" value="77"></mat-progress-bar>
+                    </td>
+                    <td>4 Months</td>
+                  </tr>
+                  <tr>
+                    <td>Geography</td>
+                    <td>41%<mat-progress-bar mode="determinate" value="41" color="warn"></mat-progress-bar>
+                    </td>
+                    <td>2 Months</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Time Spent On Learning</h2>
+          </div>
+          <div class="body">
+            <apx-chart [series]="barChartOptions.series!" [chart]="barChartOptions.chart!"
+              [dataLabels]="barChartOptions.dataLabels!" [plotOptions]="barChartOptions.plotOptions!"
+              [responsive]="barChartOptions.responsive!" [xaxis]="barChartOptions.xaxis!" [grid]="barChartOptions.grid!"
+              [legend]="barChartOptions.legend!" [fill]="barChartOptions.fill!"></apx-chart>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              Upcomming Class
+            </h2>
+          </div>
+          <div class="card-body">
+            <ng-scrollbar style="height: 335px" visibility="hover">
+              <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder">
+                <li class="lecture-list">
+                  <img alt="image" class="msr-3 rounded-circle" width="40" src="assets/images/user/usrbig1.jpg">
+                  <div class="set-flex">
+                    <div class="media-title font-16">Cara Stevens</div>
+                    <div class="text-job text-muted mb-0">Mathematics</div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="media-title font-16">12 June '20</div>
+                    <div class="text-job text-muted mb-0">09:00-10:00</div>
+                  </div>
+                </li>
+                <li class="lecture-list">
+                  <img alt="image" class="msr-3 rounded-circle" width="40" src="assets/images/user/usrbig2.jpg">
+                  <div class="set-flex">
+                    <div class="media-title font-16">Airi Satou</div>
+                    <div class="text-job text-muted mb-0">Computer Studies</div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="media-title font-16">13 June '20</div>
+                    <div class="text-job text-muted mb-0">11:00-12:00</div>
+                  </div>
+                </li>
+                <li class="lecture-list">
+                  <img alt="image" class="msr-3 rounded-circle" width="40" src="assets/images/user/usrbig3.jpg">
+                  <div class="set-flex">
+                    <div class="media-title font-16">Jens Brincker</div>
+                    <div class="text-job text-muted mb-0">Geography</div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="media-title font-16">15 June '20</div>
+                    <div class="text-job text-muted mb-0">09:30-10:30</div>
+                  </div>
+                </li>
+                <li class="lecture-list">
+                  <img alt="image" class="msr-3 rounded-circle" width="40" src="assets/images/user/usrbig4.jpg">
+                  <div class="set-flex">
+                    <div class="media-title font-16">Angelica Ramos</div>
+                    <div class="text-job text-muted mb-0">Chemistry</div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="media-title font-16">16 June '20</div>
+                    <div class="text-job text-muted mb-0">14:00-15:00</div>
+                  </div>
+                </li>
+                <li class="lecture-list">
+                  <img alt="image" class="msr-3 rounded-circle" width="40" src="assets/images/user/usrbig5.jpg">
+                  <div class="set-flex">
+                    <div class="media-title font-16">Cara Stevens</div>
+                    <div class="text-job text-muted mb-0">Painting</div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="media-title font-16">18 June '20</div>
+                    <div class="text-job text-muted mb-0">11:00-12:30</div>
+                  </div>
+                </li>
+                <li class="lecture-list">
+                  <img alt="image" class="msr-3 rounded-circle" width="40" src="assets/images/user/usrbig6.jpg">
+                  <div class="set-flex">
+                    <div class="media-title font-16">Jacob Ryan</div>
+                    <div class="text-job text-muted mb-0">Business Studies</div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="media-title font-16">22 June '20</div>
+                    <div class="text-job text-muted mb-0">13:00-14:15</div>
+                  </div>
+                </li>
+              </ul>
+            </ng-scrollbar>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="card">
+          <div class="header">
+            <h2>Test Results</h2>
+          </div>
+          <div class="body">
+            <apx-chart [series]="areaChartOptions.series!" [chart]="areaChartOptions.chart!"
+              [xaxis]="areaChartOptions.xaxis!" [yaxis]="areaChartOptions.yaxis!" [colors]="areaChartOptions.colors!"
+              [stroke]="areaChartOptions.stroke!" [legend]="areaChartOptions.legend!" [grid]="areaChartOptions.grid!"
+              [tooltip]="areaChartOptions.tooltip!" [dataLabels]="areaChartOptions.dataLabels!"></apx-chart>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Assignments</h2>
+          </div>
+          <div class="body">
+            <div class="doc-file-type">
+              <ng-scrollbar style="height: 285px" visibility="hover">
+                <ul class="list-unstyled">
+                  <li class="d-flex mb-3">
+                    <span class="msr-3 align-self-center img-icon primary-rgba text-primary"><i
+                        class="far fa-file-word"></i></span>
+                    <div class="set-flex">
+                      <h5 class="font-16 mb-1">Java Programming</h5>
+                      <p>.doc, 4.3 MB</p>
+                    </div>
+                    <div class="ms-auto">
+                      <td>
+                        <i class="far fa-trash-alt psr-3"></i>
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="msr-3 align-self-center img-icon success-rgba text-success"><i
+                        class="far fa-file-excel"></i></span>
+                    <div class="set-flex">
+                      <h5 class="font-16 mb-1">Angular Theory</h5>
+                      <p>.xls, 2.5 MB</p>
+                    </div>
+                    <div class="ms-auto">
+                      <td>
+                        <i class="far fa-trash-alt psr-3"></i>
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="msr-3 align-self-center img-icon danger-rgba text-danger"><i
+                        class="far fa-file-pdf"></i></span>
+                    <div class="set-flex">
+                      <h5 class="font-16 mb-1">Maths Sums Solution</h5>
+                      <p>.pdf, 10.5 MB</p>
+                    </div>
+                    <div class="ms-auto">
+                      <td>
+                        <i class="far fa-trash-alt psr-3"></i>
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="msr-3 align-self-center img-icon info-rgba text-info"><i
+                        class="far fa-file-archive"></i></span>
+                    <div class="set-flex">
+                      <h5 class="font-16 mb-1">Submit Science Journal</h5>
+                      <p>.zip, 53.2 MB</p>
+                    </div>
+                    <div class="ms-auto">
+                      <td>
+                        <i class="far fa-trash-alt psr-3"></i>
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="msr-3 align-self-center img-icon primary-rgba text-primary"><i
+                        class="far fa-file-word"></i></span>
+                    <div class="set-flex">
+                      <h5 class="font-16 mb-1">Marketing Instructions</h5>
+                      <p>.doc, 5.3 MB</p>
+                    </div>
+                    <div class="ms-auto">
+                      <td>
+                        <i class="far fa-trash-alt psr-3"></i>
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                      </td>
+                    </div>
+                  </li>
+                </ul>
+              </ng-scrollbar>
+              <div class="text-center p-t-20">
+                <button mat-stroked-button color="primary">Report Adverse Effect</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Notice Board</h2>
+          </div>
+          <div class="body">
+            <ng-scrollbar style="height: 370px" visibility="hover">
+              <div class="recent-comment">
+                <div class="notice-board">
+                  <div class="table-img">
+                    <img class="notice-object" src="assets/images/user/user6.jpg" alt="...">
+                  </div>
+                  <div class="notice-body">
+                    <h5 class="notice-heading col-green">Airi Satou</h5>
+                    <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                    <small class="text-muted">7 hours ago</small>
+                  </div>
+                </div>
+                <div class="notice-board">
+                  <div class="table-img">
+                    <img class="notice-object" src="assets/images/user/user4.jpg" alt="...">
+                  </div>
+                  <div class="notice-body">
+                    <h5 class="notice-heading color-primary col-indigo">Sarah Smith</h5>
+                    <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                    <p class="comment-date">1 hour ago</p>
+                  </div>
+                </div>
+                <div class="notice-board">
+                  <div class="table-img">
+                    <img class="notice-object" src="assets/images/user/user3.jpg" alt="...">
+                  </div>
+                  <div class="notice-body">
+                    <h5 class="notice-heading color-danger col-cyan">Cara Stevens</h5>
+                    <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                    <div class="comment-date">Yesterday</div>
+                  </div>
+                </div>
+                <div class="notice-board no-border">
+                  <div class="table-img">
+                    <img class="notice-object" src="assets/images/user/user7.jpg" alt="...">
+                  </div>
+                  <div class="notice-body">
+                    <h5 class="notice-heading color-info col-orange">Ashton Cox</h5>
+                    <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                    <div class="comment-date">Yesterday</div>
+                  </div>
+                </div>
+                <div class="notice-board">
+                  <div class="table-img">
+                    <img class="notice-object" src="assets/images/user/user5.jpg" alt="...">
+                  </div>
+                  <div class="notice-body">
+                    <h5 class="notice-heading color-primary col-indigo">Jay Soni</h5>
+                    <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                    <p class="comment-date">1 hour ago</p>
+                  </div>
+                </div>
+                <div class="notice-board">
+                  <div class="table-img">
+                    <img class="notice-object" src="assets/images/user/user6.jpg" alt="...">
+                  </div>
+                  <div class="notice-body">
+                    <h5 class="notice-heading color-primary col-indigo">Veena Pandit</h5>
+                    <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                    <p class="comment-date">1 hour ago</p>
+                  </div>
+                </div>
+              </div>
+            </ng-scrollbar>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="card">
+          <div class="header">
+            <h2>Library Book Issue List</h2>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Book ID</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Issue Date</th>
+                    <th>Status</th>
+                    <th>Return Date</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AI99876</td>
+                    <td>Computer Programming</td>
+                    <td>John Deo</td>
+                    <td>10-03-2019</td>
+                    <td><span class="badge badge-solid-green">Issue</span></td>
+                    <td>23-03-2019</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>BT67657</td>
+                    <td>Design Pattern In java</td>
+                    <td>Airi Satou</td>
+                    <td>14-04-2019</td>
+                    <td><span class="badge badge-solid-orange">Return</span></td>
+                    <td>28-04-2019</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>RT67013</td>
+                    <td>The Mathematics Principles</td>
+                    <td>Angelica Ramos</td>
+                    <td>17-04-2019</td>
+                    <td><span class="badge badge-solid-green">Issue</span></td>
+                    <td>24-04-2019</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PS2398</td>
+                    <td>Angular 10 Advance</td>
+                    <td>Jens Brincker</td>
+                    <td>21-04-2019</td>
+                    <td><span class="badge badge-solid-green">Issue</span></td>
+                    <td>29-04-2019</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>MO4987</td>
+                    <td>SEO Optimazation</td>
+                    <td>Cara Stevens</td>
+                    <td>11-05-2019</td>
+                    <td><span class="badge badge-solid-orange">Return</span></td>
+                    <td>18-05-2019</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>BE2876</td>
+                    <td>Android Basic Concept</td>
+                    <td>Jacob Ryan</td>
+                    <td>15-05-2019</td>
+                    <td><span class="badge badge-solid-green">Issue</span></td>
+                    <td>21-05-2019</td>
+                    <td>
+                      <button mat-icon-button class="tbl-action-btn">
+                        <app-feather-icons [icon]="'file-text'" [class]="'tbl-fav-edit'"></app-feather-icons>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

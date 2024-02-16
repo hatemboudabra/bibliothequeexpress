@@ -1,0 +1,111 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header" *ngFor="let breadscrum of breadscrums">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="breadscrum.title" [items]="breadscrum.items" [active_item]="breadscrum.active">
+      </app-breadcrumb>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="materialTableHeader">
+            <div class="left">
+              <ul class="header-buttons-left ms-0">
+                <li class="tbl-title">
+                  <h2>Homework</h2>
+                </li>
+                <li class="tbl-search-box">
+                  <label for="search-input"><i class="material-icons search-icon">search</i></label>
+                  <input placeholder="Search" type="text" #filter class="browser-default search-field"
+                    aria-label="Search box">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="body overflow-auto">
+            <div class="responsive_table">
+              <table mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                  <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+                </ng-container>
+
+                <!-- Class Column -->
+                <ng-container matColumnDef="class">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Class </mat-header-cell>
+                  <mat-cell *matCellDef="let row"><span class="mobile-label">Class:</span> {{row.class}} </mat-cell>
+                </ng-container>
+
+                <!-- Section Column -->
+                <ng-container matColumnDef="section">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Section </mat-header-cell>
+                  <mat-cell *matCellDef="let row"><span class="mobile-label">Section:</span> {{row.section}} </mat-cell>
+                </ng-container>
+
+                <!-- Subject Column -->
+                <ng-container matColumnDef="subject">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Subject </mat-header-cell>
+                  <mat-cell *matCellDef="let row"> <span class="mobile-label">Subject:</span>{{row.subject}} </mat-cell>
+                </ng-container>
+
+                <!-- Homework Date Column -->
+                <ng-container matColumnDef="homeworkDate">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Homework Date</mat-header-cell>
+                  <mat-cell *matCellDef="let row"><span class="mobile-label">Homework Date:</span>
+                    {{row.homeworkDate | date: 'MM/dd/yyyy' }}
+                  </mat-cell>
+                </ng-container>
+
+                <!-- Submission Date Column -->
+                <ng-container matColumnDef="submissionDate">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Submission Date</mat-header-cell>
+                  <mat-cell *matCellDef="let row"> <span class="mobile-label">Submission
+                      Date:</span>{{row.submissionDate | date: 'MM/dd/yyyy' }}
+                  </mat-cell>
+                </ng-container>
+
+                <!-- Evalution Date Column -->
+                <ng-container matColumnDef="evalutionDate">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header>Evalution Date</mat-header-cell>
+                  <mat-cell *matCellDef="let row"><span class="mobile-label">Evalution Date:</span>
+                    {{row.evalutionDate | date: 'MM/dd/yyyy' }}
+                  </mat-cell>
+                </ng-container>
+
+                <!-- status Column -->
+                <ng-container matColumnDef="status">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Status
+                  </mat-header-cell>
+                  <mat-cell mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Status:</span>
+                    <div *ngIf="row.status==='Complete'">
+                      <span class="badge badge-solid-green">
+                        {{row.status}}</span>
+                    </div>
+                    <div *ngIf="row.status==='Incomplete'">
+                      <span class="badge badge-solid-orange">
+                        {{row.status}}</span>
+                    </div>
+                  </mat-cell>
+                </ng-container>
+                <!-- actions -->
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <!-- <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
+                <mat-row *matRowDef="let row; columns: displayedColumns;" [style.cursor]="'pointer'" matRipple>
+                </mat-row>
+              </table>
+              <div class="no-results" [style.display]="dataLength === 0 ? '' : 'none'">
+                No results
+              </div>
+
+              <mat-paginator #paginator [length]="dataLength" [pageIndex]="0" [pageSize]="10"
+                [pageSizeOptions]="[5, 10, 25, 100]">
+              </mat-paginator>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
